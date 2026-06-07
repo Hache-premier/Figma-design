@@ -14,7 +14,7 @@ This is a HTML/CSS project design to signed-off production details for the FIGMA
 
 1. Clone the repository:
 2. Navigate into the folder:
-FIGMA_DESIGN_PROJECT
+   FIGMA_DESIGN_PROJECT
 3. Run the script with GO Live that takes you to the browser
 
 ## Usage
@@ -30,5 +30,7 @@ Testimonials
 ## Contributing
 
 Pull requests are welcome
+
 # The-Figma-Design
+
 # Figma-design
