@@ -1,0 +1,810 @@
+/* ============================================================
+   BASE RESET & GLOBALS
+   ============================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+  background: #043873;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container1 {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: blue;
+  padding-bottom: 10px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.logo1 .logo10 {
+  margin: 10px;
+  width: 60px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-login {
+  background: #ffe492;
+  color: blue;
+}
+
+.btn-cta {
+  background: #4f9cf9;
+  color: white;
+}
+
+.btn-cta8 {
+  background: #4f9cf9;
+  color: white;
+  margin-top: 25px;
+}
+
+.menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ============================================================
+   HERO / SUB-CONTAINERS
+   ============================================================ */
+.sub-container {
+  border-top: 1px solid lightblue;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("../Images/Element.svg");
+  background-size: 100% 400px;
+  background-repeat: no-repeat;
+}
+
+.sub1 {
+  flex: 1 1 300px;
+  padding-top: 100px;
+  padding-left: clamp(20px, 5vw, 150px);
+  padding-right: clamp(20px, 3vw, 60px);
+  color: white;
+}
+
+.empty {
+  background: rgb(196, 222, 253);
+  flex: 0 1 500px;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  margin: 50px clamp(20px, 5vw, 130px) 0 clamp(10px, 3vw, 40px);
+}
+
+.nav-buttons2 {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.sub-head {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* --- Section 2 --- */
+.sub2 {
+  flex: 1 1 300px;
+  padding-top: 100px;
+  padding-left: clamp(20px, 5vw, 150px);
+  padding-right: clamp(20px, 3vw, 60px);
+}
+
+.empty2 {
+  background: rgb(196, 222, 253);
+  flex: 0 1 500px;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  margin: 50px clamp(20px, 5vw, 60px) 0 auto;
+}
+
+.head3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sub3 {
+  flex: 1 1 300px;
+  padding: 100px clamp(20px, 5vw, 150px) 0;
+}
+
+.nav-buttons3 {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: clamp(20px, 5vw, 150px);
+}
+
+/* --- Section 4 --- */
+.sub-container4 {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(4, 56, 115);
+  color: white;
+}
+
+.sub4 {
+  flex: 1 1 300px;
+  padding: 100px clamp(20px, 5vw, 150px) 60px;
+}
+
+/* --- Section 5 --- */
+.sub-container5 {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  color: black;
+  padding-top: 100px;
+}
+
+.sub5 {
+  flex: 1 1 300px;
+  padding: 0 clamp(20px, 5vw, 150px) 60px clamp(20px, 5vw, 80px);
+}
+
+.empty3 {
+  background: rgb(196, 222, 253);
+  flex: 0 1 100%;
+  width: 100%;
+  height: 300px;
+  margin: 50px clamp(20px, 3vw, 40px) 150px;
+}
+
+/* ============================================================
+   PRICING
+   ============================================================ */
+.sub-bottom-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pricing-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 100px;
+  padding: 0 24px;
+}
+
+.plan-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 36px 32px;
+}
+
+.plan-card.highlighted {
+  background: #1e3a8a;
+  color: #fff;
+  border: none;
+  padding: 48px 32px;
+  box-shadow: 0 25px 50px -12px rgba(30, 58, 138, 0.35);
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+.plan-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.plan-price {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.highlighted .plan-price {
+  color: #facc15;
+}
+
+.plan-subtitle,
+.plan-subtitle0,
+.plan-subtitle9 {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.highlighted .plan-subtitle {
+  color: #dbeafe;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 36px;
+}
+
+.features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.features li:last-child {
+  margin-bottom: 0;
+}
+
+.icon-check {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.highlighted {
+  color: #fff;
+}
+
+.plan-card:not(.highlighted) .icon-check {
+  color: #111827;
+}
+
+.btn-get-started,
+.btn-get-started1 {
+  width: 150px;
+  height: 40px;
+  padding: 12px 24px;
+  border: 1px solid rgb(206, 206, 114);
+  background: transparent;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-get-started:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.highlighted .btn-get-started {
+  background: #387ded;
+  border: none;
+  color: white;
+}
+
+.highlighted .btn-get-started:hover {
+  background: #387ded;
+}
+
+/* ============================================================
+   SECTION 6
+   ============================================================ */
+.sub-container6 {
+  background: rgb(30, 58, 138);
+  text-align: center;
+  color: white;
+  padding: 40px clamp(20px, 5vw, 350px) 50px;
+  background-image: url("../Images/BACKGROUND.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 400px 700px;
+}
+
+.sub6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.para {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ============================================================
+   DIAGRAMS
+   ============================================================ */
+.dia1 {
+  height: auto;
+  max-width: 100%;
+  margin-left: clamp(20px, 5vw, 150px);
+  margin-bottom: 50px;
+}
+
+.diagram1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 0 clamp(20px, 5vw, 150px);
+  max-width: 100%;
+}
+
+.mid5 {
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+.diagram2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px clamp(20px, 5vw, 150px) 0;
+  max-width: 100%;
+}
+
+.element {
+  margin-bottom: 20px;
+  font-size: clamp(1.8em, 4vw, 3em);
+}
+
+.overview {
+  color: yellow;
+}
+
+.highlight {
+  position: relative;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 0.2em;
+  background-color: #ffd700;
+  z-index: -1;
+  opacity: 0.6;
+  transform: rotate(-1deg);
+  border-radius: 2px;
+}
+
+.diagram-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.element2 {
+  font-size: clamp(1.8em, 4vw, 3em);
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+
+.sponsor-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 100px;
+  padding: 0 20px;
+}
+
+.diagram3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: #043873;
+  padding: 70px clamp(20px, 5vw, 150px);
+  color: white;
+  max-width: 100%;
+  background-image: url("../Images/Element10.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.apps {
+  height: auto;
+  max-width: 100%;
+}
+
+.head-element {
+  font-size: clamp(1.8em, 4vw, 3em);
+}
+
+.sub0 {
+  flex: 1 1 300px;
+  padding: 0 clamp(20px, 3vw, 100px);
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testimonial {
+  border: 1px solid rgb(250, 227, 227);
+  border-radius: 10px;
+  background-color: rgb(11, 147, 231);
+  min-width: 0;
+  flex: 1 1 280px;
+}
+
+.first-testimonial {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.testimonial-img,
+.testimonial-img1,
+.testimonial-img5 {
+  border-radius: 50%;
+  margin: 20px 20px 0 10px;
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+}
+
+.content0 {
+  margin-left: 18px;
+  margin-right: 10px;
+}
+
+hr {
+  margin: 20px 50px;
+}
+
+.sub-first-testimonial {
+  font-size: 1.2em;
+  display: grid;
+}
+
+.small-text {
+  font-size: small;
+}
+
+.info {
+  margin: 10px 10px 35px 0;
+}
+
+.full-testimonial {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px clamp(20px, 5vw, 150px) 100px;
+}
+
+.last2 {
+  color: white;
+  flex: 1 1 280px;
+}
+
+.para2 {
+  max-width: 600px;
+  margin: 10px auto 0;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.nav-buttons4 {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ============================================================
+   APP ICONS
+   ============================================================ */
+.app-icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.apps-icon {
+  width: 40px;
+  margin: 50px 0 100px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.sub-container10 {
+  background: rgb(30, 58, 138);
+  color: white;
+  padding: 40px clamp(20px, 5vw, 150px) 50px;
+}
+
+.mid-content {
+  text-align: center;
+}
+
+.last-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 0 clamp(20px, 3vw, 60px);
+}
+
+.terms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  font-size: x-small;
+  padding: 0 20px;
+}
+
+.bottom-apps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+/* ============================================================
+   TABLET  (max-width: 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .pricing-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plan-card.highlighted {
+    transform: scale(1.04);
+  }
+
+  .diagram1,
+  .diagram2,
+  .diagram3 {
+    gap: 40px;
+  }
+
+  .sub-container6 {
+    background-size: 250px 450px;
+  }
+}
+
+/* ============================================================
+   MOBILE  (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Navbar */
+  .container1 {
+    padding: 0 16px 10px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links,
+  .nav-buttons {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hero sections */
+  .sub-container {
+    flex-direction: column;
+    background-size: 100% 300px;
+  }
+
+  .sub1,
+  .sub2,
+  .sub3,
+  .sub4,
+  .sub5,
+  .sub0 {
+    padding: 40px 20px 20px;
+    text-align: center;
+  }
+
+  .sub-head,
+  .head3 {
+    flex-direction: column;
+  }
+
+  .empty,
+  .empty2,
+  .empty3 {
+    width: calc(100% - 40px);
+    max-width: 100%;
+    height: 220px;
+    margin: 20px auto;
+  }
+
+  .nav-buttons2,
+  .nav-buttons3,
+  .nav-buttons4 {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+  }
+
+  /* Containers */
+  .sub-container4,
+  .sub-container5 {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  /* Pricing */
+  .pricing-wrapper {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .plan-card.highlighted {
+    transform: scale(1);
+    padding: 36px 24px;
+  }
+
+  /* Diagrams */
+  .diagram1,
+  .diagram2,
+  .diagram3 {
+    flex-direction: column;
+    padding: 30px 16px;
+    gap: 24px;
+  }
+
+  .dia1,
+  .apps {
+    margin: 0 auto 20px;
+  }
+
+  .element,
+  .element2,
+  .head-element {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  /* Section 6 */
+  .sub-container6 {
+    padding: 40px 20px 50px;
+    background-image: none;
+  }
+
+  /* Testimonials */
+  .full-testimonial {
+    flex-direction: column;
+    padding: 20px 16px 60px;
+  }
+
+  .last2 {
+    display: none;
+  }
+
+  /* Footer */
+  .sub-container10 {
+    padding: 30px 16px 40px;
+  }
+
+  .last-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .terms {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .bottom-apps {
+    justify-content: center;
+  }
+
+  .sponsor-icons,
+  .app-icon {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  /* Misc */
+  .diagram3 {
+    background-image: none;
+  }
+
+  .para {
+    padding: 0 16px;
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE  (max-width: 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .plan-price {
+    font-size: 36px;
+  }
+
+  .plan-card,
+  .plan-card.highlighted {
+    padding: 28px 20px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .empty,
+  .empty2,
+  .empty3 {
+    height: 180px;
+  }
+}
