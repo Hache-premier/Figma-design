@@ -1,7 +1,3 @@
-```css
-/* ============================================================
-   BASE RESET & GLOBALS
-   ============================================================ */
 *,
 *::before,
 *::after {
@@ -99,7 +95,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: blue;
+  color: white;
 }
 
 .logo img {
@@ -547,6 +543,7 @@ img {
 
 /* ============================================================
    TESTIMONIALS
+   Two blue cards and one white card
    ============================================================ */
 .full-testimonial {
   display: flex;
@@ -558,19 +555,57 @@ img {
   overflow-x: auto;
 }
 
+/* Shared card layout */
 .testimonial {
   flex: 1 0 calc((100% - 40px) / 3);
   min-width: 0;
   border: none;
   border-radius: 8px;
   background-color: #4f9cf9;
+  color: #ffffff;
   padding: 24px;
+  box-shadow: none;
 }
 
-.testimonial:first-child {
+/* First card: blue */
+.full-testimonial > section:first-child,
+.full-testimonial > section:first-child .testimonial {
+  background-color: #4f9cf9;
+  color: #ffffff;
+}
+
+/* Second card: white */
+.full-testimonial > section:nth-child(2),
+.full-testimonial > section:nth-child(2) .testimonial {
   background-color: #ffffff;
   color: #292929;
   box-shadow: 0 8px 30px rgb(0 0 0 / 8%);
+}
+
+/* Third card: blue */
+.full-testimonial > section:nth-child(3),
+.full-testimonial > section:nth-child(3) .testimonial {
+  background-color: #4f9cf9;
+  color: #ffffff;
+}
+
+/* Ensure text follows each card's color */
+.full-testimonial > section:first-child p,
+.full-testimonial > section:first-child h3,
+.full-testimonial > section:first-child .small-text,
+.full-testimonial > section:first-child .testimonial,
+.full-testimonial > section:nth-child(3) p,
+.full-testimonial > section:nth-child(3) h3,
+.full-testimonial > section:nth-child(3) .small-text,
+.full-testimonial > section:nth-child(3) .testimonial {
+  color: #ffffff;
+}
+
+.full-testimonial > section:nth-child(2) p,
+.full-testimonial > section:nth-child(2) h3,
+.full-testimonial > section:nth-child(2) .small-text,
+.full-testimonial > section:nth-child(2) .testimonial {
+  color: #292929;
 }
 
 .first-testimonial {
@@ -611,10 +646,12 @@ img {
 }
 
 .last2 {
-  color: white;
-  flex: 1 0 280px;
+  color: inherit;
 }
 
+/* ============================================================
+   CTA TEXT
+   ============================================================ */
 .para2 {
   max-width: 600px;
   margin: 10px auto 0;
@@ -824,7 +861,7 @@ img {
     background-image: none;
   }
 
-  /* Testimonials: keep cards horizontal */
+  /* Testimonials: keep all three cards scrollable */
   .full-testimonial {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -840,8 +877,9 @@ img {
     scroll-snap-align: start;
   }
 
+  /* Keep the second and third cards visible on mobile */
   .last2 {
-    display: none;
+    display: block;
   }
 
   /* Footer */
@@ -915,4 +953,3 @@ img {
     flex-basis: 90%;
   }
 }
-```
