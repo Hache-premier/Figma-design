@@ -1,3 +1,4 @@
+
 *,
 *::before,
 *::after {
@@ -545,10 +546,13 @@ img {
    TESTIMONIALS
    Two blue cards and one white card
    ============================================================ */
+.small-text {
+  font-size: small;
+}
+
 .full-testimonial {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   align-items: stretch;
   gap: 20px;
   padding: 10px clamp(20px, 5vw, 150px) 100px;
@@ -562,7 +566,7 @@ img {
   border: none;
   border-radius: 8px;
   background-color: #4f9cf9;
-  color: #ffffff;
+  color: #fff;
   padding: 24px;
   box-shadow: none;
 }
@@ -571,13 +575,13 @@ img {
 .full-testimonial > section:first-child,
 .full-testimonial > section:first-child .testimonial {
   background-color: #4f9cf9;
-  color: #ffffff;
+  color: #fff;
 }
 
 /* Second card: white */
 .full-testimonial > section:nth-child(2),
 .full-testimonial > section:nth-child(2) .testimonial {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #292929;
   box-shadow: 0 8px 30px rgb(0 0 0 / 8%);
 }
@@ -586,7 +590,7 @@ img {
 .full-testimonial > section:nth-child(3),
 .full-testimonial > section:nth-child(3) .testimonial {
   background-color: #4f9cf9;
-  color: #ffffff;
+  color: #fff;
 }
 
 /* Ensure text follows each card's color */
@@ -598,7 +602,7 @@ img {
 .full-testimonial > section:nth-child(3) h3,
 .full-testimonial > section:nth-child(3) .small-text,
 .full-testimonial > section:nth-child(3) .testimonial {
-  color: #ffffff;
+  color: #fff;
 }
 
 .full-testimonial > section:nth-child(2) p,
@@ -610,8 +614,7 @@ img {
 
 .first-testimonial {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   align-items: center;
   gap: 16px;
 }
@@ -635,10 +638,6 @@ img {
 .sub-first-testimonial {
   display: grid;
   gap: 8px;
-}
-
-.small-text {
-  font-size: small;
 }
 
 .info {
@@ -863,8 +862,7 @@ img {
 
   /* Testimonials: keep all three cards scrollable */
   .full-testimonial {
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     gap: 16px;
     padding: 20px 16px 60px;
     overflow-x: auto;
